@@ -49,6 +49,39 @@ class Projeto_Atividade:
         def __str__(self):
                 return "Nome do projeto:" + self.projeto.nome + "\nNome da atividade:" + self.atividade.nome
 
+
+class Pessoa2:
+        def __init__(self,nome,idade,evento):
+                self.nome = nome
+                self.idade = idade
+                self.evento = evento
+                
+
+
+class Pessoa_Fisica(Pessoa2):
+        def __init__(self,cpf):
+                self.nome = Pessoa2.nome
+                self.idade = Pessoa2.idade
+                self.cpf = Pessoa2.cpf
+
+
+class Autor(Pessoa2):
+        def __init__(self,obra):
+                self.nome = Pessoa2.nome
+                self.obra = obra
+                
+class Pessoa_Juridica(Pessoa2):
+        def __init__(self,cnpj):
+
+class Evento:
+  def __init__(self,nome,local,data_inicio,data_fim):
+    self.nome = nome
+        self.local = local
+        self.data_inicio = data_inicio
+        self.data_fim = data_fim
+
+
+'''
 p = Projeto("Projeto1","15-02-2019","31-12-2019")
 pe = Pessoa("Vinicius","24-09-1998")
 a = Atividade("Atividade1","Máxima","20-02-2019","21-02-2019",pe)
@@ -60,5 +93,12 @@ a.finalizar_atividade()
 print("Nome da atividade:",a.nome,"   ","Status:",a.status)
 print('*'*52)
 print(Projeto_Atividade)
+'''
+
+e = Evento("Matar baiano","Rede","24/05/2019","25/05/2019")
+p = Pessoa_Fisica("Vinicius",20,"12345678910")
+
+print(p.cpf)
+
 
 # LPC
